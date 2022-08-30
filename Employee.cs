@@ -18,7 +18,7 @@ namespace EmployeeInfo
         public string Designation { get; set; }
 
 
-        public Employee(string iD, string firstName, string lastName, string email, string phone, DateTime dateOfBirth, DateTime joinningDateTime, string designation)
+        public Employee(string iD, string firstName, string lastName, string email, string phone, DateTime dateOfBirth, DateTime joinningDateTime, int designation)
         {
 
             this.ID = iD;
@@ -42,7 +42,7 @@ namespace EmployeeInfo
             int month = (age.Days - year * 365) / 30;
             int day = (age.Days - month * 365 - month * 30);
 
-            return year.ToString() + " năm " + month.ToString() + " tháng " + day.ToString() + " ngày";
+            return year.ToString() + " tuổi " + month.ToString() + " tháng " + day.ToString() + " ngày";
         }
 
         public string[] GetRole(string role)
